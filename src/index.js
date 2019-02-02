@@ -10,13 +10,6 @@ import './style.scss';
 
 
 class Main extends React.Component {
-  componentWillMount() {
-    window.onload = () => {
-    chrome.tabs.executeScript( null, {code:"console.log('test')"});
-
-    };
-  }
-
   render() {
     return (
    <div className={'my-extension'}>
