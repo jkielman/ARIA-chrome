@@ -1,0 +1,116 @@
+:root {
+  --font-stack: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif!important;
+}
+
+/*-------a11y tool -  CODE NEEDS TO BE CLEANED UP*/
+
+
+/*-------https://www.w3.org/TR/html-aria/--------*/
+
+
+
+body.a11y img:not([alt]),
+body.a11y header:not([role]),
+body.a11y nav:not([role]),
+body.a11y footer:not([role]),
+body.a11y aside:not([role])  {
+   outline:#00d9ad 2px solid!important;
+   position: relative;
+}
+
+
+body.a11y img:not([alt]):before {
+  font-family:var(--font-stack);
+  font-weight:500;
+ 	content: 'alt';
+  font-size:10px;
+  color:#fff;
+  background-color:#00d9ad;
+  padding:4px;
+  height:20px;
+  text-transform:capitalize;
+  position: absolute;
+  z-index: 2000;
+}
+
+
+body.a11y header:not([role]):before, body.a11y nav:not([role]):before, body.a11y footer:not([role]):before, body.a11y aside:not([role]):before {
+  font-family:var(--font-stack);
+  font-weight:500;
+ content: 'role';
+  font-size:10px;
+  color:#fff;
+  background-color:#00d9ad;
+  padding:4px;
+  height:20px;
+  text-transform:capitalize;
+  position: absolute;
+  z-index: 2000;
+  top:0;
+  left:0;
+}
+
+body.a11y a:not([role]):before {
+  font-family:var(--font-stack);
+  font-weight:500;
+  content: 'role = link';
+  font-size:10px;
+  color:#fff;
+  background-color:#00d9ad;
+  padding:4px;
+  height:20px;
+  text-transform:capitalize;
+  position: absolute;
+  z-index: 2000;
+  top:0;
+  left:0;
+}
+
+body.a11y article:not([role]):before {
+  font-family:var(--font-stack);
+  font-weight:500;
+  content: 'role = article';
+  font-size:10px;
+  color:#fff;
+  background-color:#00d9ad;
+  padding:4px;
+  height:20px;
+  text-transform:capitalize;
+  position: absolute;
+  z-index: 2000;
+  top:0;
+  left:0;
+}
+
+body.a11y aside:not([role]):before {
+  font-family:var(--font-stack);
+  font-weight:500;
+  content: 'role = complementary';
+  font-size:10px;
+  color:#fff;
+  background-color:#00d9ad;
+  padding:4px;
+  height:20px;
+  text-transform:capitalize;
+  position: absolute;
+  z-index: 2000;
+  top:0;
+  left:0;
+}
+
+body.a11y button:not([role]):before {
+  font-family:var(--font-stack);
+  font-weight:500;
+  content: 'role = complementary';
+  font-size:10px;
+  color:#fff;
+  background-color:#00d9ad;
+  padding:4px;
+  height:20px;
+  text-transform:capitalize;
+  position: absolute;
+  z-index: 2000;
+  top:0;
+  left:0;
+}
+
