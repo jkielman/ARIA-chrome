@@ -6,7 +6,6 @@
     --font-stack: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif!important;
 }
 
-/*-------a11y tool -  CODE NEEDS TO BE CLEANED UP*/
 /*-------https://www.w3.org/TR/html-aria/--------*/
 
 body.a11y img:not([alt]),
