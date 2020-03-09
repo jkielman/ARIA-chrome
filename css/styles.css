@@ -1,62 +1,39 @@
 :root {
-  --font-stack: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif!important;
+    --outline:2px #00d9ad solid!important;
+    --greyoutline:1px #E0E5EB solid;
+    --neongreen:#00d9ad;
+    --white:#fff;
+    --font-stack: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif!important;
 }
 
 /*-------a11y tool -  CODE NEEDS TO BE CLEANED UP*/
-
-
 /*-------https://www.w3.org/TR/html-aria/--------*/
-
-
 
 body.a11y img:not([alt]),
 body.a11y header:not([role]),
 body.a11y nav:not([role]),
 body.a11y footer:not([role]),
 body.a11y aside:not([role])  {
-   outline:#00d9ad 2px solid!important;
+   outline:var(--outline);
    position: relative;
+   font-family:var(--font-stack);
+   font-weight:500;
+   color:var(--white);
+   background-color:var(--neongreen);
+   text-transform:capitalize;
 }
 
-
-body.a11y img:not([alt]):before {
-  font-family:var(--font-stack);
-  font-weight:500;
- 	content: 'alt';
-  font-size:10px;
-  color:#fff;
-  background-color:#00d9ad;
-  padding:4px;
-  height:20px;
-  text-transform:capitalize;
-  position: absolute;
-  z-index: 2000;
-}
-
-
-body.a11y header:not([role]):before, body.a11y nav:not([role]):before, body.a11y footer:not([role]):before, body.a11y aside:not([role]):before {
-  font-family:var(--font-stack);
-  font-weight:500;
- content: 'role';
-  font-size:10px;
-  color:#fff;
-  background-color:#00d9ad;
-  padding:4px;
-  height:20px;
-  text-transform:capitalize;
-  position: absolute;
-  z-index: 2000;
-  top:0;
-  left:0;
-}
-
+body.a11y img:not([alt]):before,
+body.a11y header:not([role]):before,
+body.a11y nav:not([role]):before,
+body.a11y footer:not([role]):before,
+body.a11y aside:not([role]):before,
 body.a11y a:not([role]):before {
   font-family:var(--font-stack);
   font-weight:500;
-  content: 'role = link';
   font-size:10px;
-  color:#fff;
-  background-color:#00d9ad;
+  color:var(--white);
+  background-color:var(--neongreen);
   padding:4px;
   height:20px;
   text-transform:capitalize;
@@ -66,51 +43,27 @@ body.a11y a:not([role]):before {
   left:0;
 }
 
-body.a11y article:not([role]):before {
-  font-family:var(--font-stack);
-  font-weight:500;
-  content: 'role = article';
-  font-size:10px;
-  color:#fff;
-  background-color:#00d9ad;
-  padding:4px;
-  height:20px;
-  text-transform:capitalize;
-  position: absolute;
-  z-index: 2000;
-  top:0;
-  left:0;
+body.a11y img:not([alt]):before {
+  content: 'alt';
 }
 
-body.a11y aside:not([role]):before {
-  font-family:var(--font-stack);
-  font-weight:500;
-  content: 'role = complementary';
-  font-size:10px;
-  color:#fff;
-  background-color:#00d9ad;
-  padding:4px;
-  height:20px;
-  text-transform:capitalize;
-  position: absolute;
-  z-index: 2000;
-  top:0;
-  left:0;
+body.a11y header:not([role]):before,
+body.a11y nav:not([role]):before,
+body.a11y footer:not([role]):before,
+body.a11y aside:not([role]):before,
+body.a11y aside:not([role]):before  {
+  content: 'role';
 }
 
 body.a11y button:not([role]):before {
-  font-family:var(--font-stack);
-  font-weight:500;
+  content: 'role = link';
+}
+
+body.a11y article:not([role]):before {
+  content: 'role = article';
+}
+
+body.a11y aside:not([role]):before {
   content: 'role = complementary';
-  font-size:10px;
-  color:#fff;
-  background-color:#00d9ad;
-  padding:4px;
-  height:20px;
-  text-transform:capitalize;
-  position: absolute;
-  z-index: 2000;
-  top:0;
-  left:0;
 }
 
