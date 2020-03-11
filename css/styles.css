@@ -1,6 +1,5 @@
 :root {
     --outline:2px #00d9ad solid!important;
-    --greyoutline:1px #E0E5EB solid;
     --neongreen:#00d9ad;
     --white:#fff;
     --font-stack: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif!important;
@@ -12,22 +11,25 @@ body.a11y img:not([alt]),
 body.a11y header:not([role]),
 body.a11y nav:not([role]),
 body.a11y footer:not([role]),
-body.a11y aside:not([role])  {
+body.a11y article:not([role]),
+body.a11y aside:not([role]),
+body.a11y datalist:not([role]),
+body.a11y dd:not([role]),
+body.a11y button:not([role]) {
    outline:var(--outline);
    position: relative;
-   font-family:var(--font-stack);
-   font-weight:500;
-   color:var(--white);
-   background-color:var(--neongreen);
-   text-transform:capitalize;
 }
 
 body.a11y img:not([alt]):before,
 body.a11y header:not([role]):before,
 body.a11y nav:not([role]):before,
 body.a11y footer:not([role]):before,
+body.a11y article:not([role]):before,
 body.a11y aside:not([role]):before,
-body.a11y a:not([role]):before {
+body.a11y button:not([role]):before,
+body.a11y a:not([role]):before,
+body.a11y datalist:not([role]):before,
+body.a11y dd:not([role]):before {
   font-family:var(--font-stack);
   font-weight:500;
   font-size:10px;
@@ -46,23 +48,78 @@ body.a11y img:not([alt]):before {
   content: 'alt';
 }
 
-body.a11y header:not([role]):before,
 body.a11y nav:not([role]):before,
 body.a11y footer:not([role]):before,
-body.a11y aside:not([role]):before,
 body.a11y aside:not([role]):before  {
   content: 'role';
 }
 
+body.a11y header:not([role]):before {
+  content: 'role = banner | group | presentation';
+}
+
 body.a11y button:not([role]):before {
-  content: 'role = link';
+  content: 'role = button | checkbox | link | menuitem | menuitemcheckbox | menuitemradio | option | radio | switch | tab';
 }
 
 body.a11y article:not([role]):before {
-  content: 'role = article';
+  content: 'role = feed | presentation | none | document | application | main or region';
 }
 
 body.a11y aside:not([role]):before {
   content: 'role = complementary';
+}
+
+body.a11y datalist:not([role]):before {
+  content: 'role = listbox';
+}
+
+body.a11y dd:not([role]):before {
+  content: 'role = definition';
+}
+
+body.a11y dfn:not([role]):before {
+  content: 'role = term';
+}
+
+body.a11y details:not([role]):before {
+  content: 'role = group';
+}
+
+body.a11y dialog:not([role]):before {
+  content: 'role = group | list | presentation';
+}
+
+body.a11y dl:not([role]):before {
+  content: 'role = listitem';
+}
+
+body.a11y embed:not([role]):before {
+  content: 'role = application | document | img | presentation';
+}
+
+body.a11y fieldset:not([role]):before {
+  content: 'role = presentation | radiogroup';
+}
+
+body.a11y figcaption:not([role]):before {
+  content: 'role = group | presentation';
+}
+
+body.a11y figure:not([role]):before {
+  content: 'role = figure';
+}
+
+body.a11y form:not([role]):before {
+  content: 'role = search | presentation';
+}
+
+body.a11y h1:not([role]):before,
+body.a11y h2:not([role]):before,
+body.a11y h3:not([role]):before,
+body.a11y h4:not([role]):before,
+body.a11y h5:not([role]):before,
+body.a11y h6:not([role]):before {
+  content: 'role = heading';
 }
 
