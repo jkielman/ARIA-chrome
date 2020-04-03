@@ -1,11 +1,12 @@
 :root {
-    --a11y-outline:2px #00d9ad solid!important;
-    --a11y-neongreen:#00d9ad;
+    --a11y-outline-green:2px #089E7F solid!important;
+    --a11y-neongreen:#089E7F;
     --a11y-white:#fff;
     --a11y-font-stack: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
 }
 
 /*-------https://www.w3.org/TR/html-aria/--------*/
+
 
 
 body.a11y header:not([role]),
@@ -66,8 +67,10 @@ body.a11y th:not([role]):before,
 body.a11y tr:not([role]):before,
 body.a11y ul:not([role]):before,
 body.a11y video:not([role]):before,
-body.a11y ul:not([role]):before {
-   outline:var(--a11y-outline)!important;
+body.a11y ul:not([role]):before,
+body.a11y ul:not([role]):before,
+body.a11y button:not([type]) {
+   outline:var(--a11y-outline-green)!important;
    position: relative!important;
 }
 
@@ -133,7 +136,8 @@ body.a11y ul:not([role]):before,
 body.a11y video:not([role]):before,
 body.a11y ul:not([role]):before,
 body.a11y ul:not([role]):before,
-body.a11y ul:not([role]):before {
+body.a11y ul:not([role]):before,
+body.a11y button:not([type]) {
   font-family:var(--a11y-font-stack)!important;
   font-weight:500!important;
   font-size:10px!important;
@@ -150,9 +154,12 @@ body.a11y ul:not([role]):before {
 }
 
 body.a11y nav:not([role]):before,
-body.a11y footer:not([role]):before,
 body.a11y aside:not([role]):before  {
   content: 'role';
+}
+
+body.a11y footer:not([role]):before {
+  content: 'role = article | complementary | main | navigation | region';
 }
 
 body.a11y header:not([role]):before {
@@ -228,7 +235,10 @@ body.a11y hr:not([role]):before {
   content: 'role = separator | presentation';
 }
 
-body.a11y img:not([role]):before {
-  content: 'role = img | button | checkbox | link | menuitem | menuitemcheckbox | menuitemradio | option | progressbar, scrollbar | separator | slider | switch | tab | treeitem';
+body.a11y button:not([type]):before {
+   content: 'type = button | submit | reset';
 }
+
+
+
 
