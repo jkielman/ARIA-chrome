@@ -1,4 +1,4 @@
-# Responder Chrome Extension
+# ARIA-chrome
 
-Outlines the web pages grid and displays the width/height in both 'em' and 'px' units when the browser is resized.
+Outlines the web pages elements that are missing ARIA attributes
 
