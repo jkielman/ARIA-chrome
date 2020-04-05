@@ -1,6 +1,5 @@
 {
-
-  "name": "A11y",
+  "name": "Ally - A11y chrome extension",
   "version": "1.0",
   "manifest_version": 2,
   "author": "Jeff Kielman",
@@ -9,12 +8,14 @@
   "browser_action": {
     "default_icon": {
       "48": "assets/icon48.png"
-    }
+    },
+    "default_popup": "popup.html"
   },
-
-
   "content_scripts": [
     {
+      "js": [
+        "js/popup.js", "js/storage.js"
+      ],
       "css":["css/styles.css"],
       "matches": [
         "http://*/*",
@@ -30,11 +31,8 @@
      "48": "assets/icon48.png",
      "128": "assets/icon128.png"
   },
-  "background": {
-        "scripts": ["js/global.js"]
-    },
   "incognito": "split",
-   "permissions": [
+    "permissions": [
     "tabs",
     "activeTab",
    "http://*/",
@@ -45,6 +43,7 @@
      ],
   "web_accessible_resources": [
     "css/styles.css",
+    "js/popup.js",
     "js/storage.js"
   ]
 }
