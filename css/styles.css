@@ -18,152 +18,152 @@
 
 
 
-body.ally-aria-active header:not([role]),
-body.ally-aria-active nav:not([role]),
-body.ally-aria-active footer:not([role]),
-body.ally-aria-active article:not([role]),
-body.ally-aria-active aside:not([role]),
-body.ally-aria-active datalist:not([role]),
-body.ally-aria-active dd:not([role]),
-body.ally-aria-active button:not([role]),
-body.ally-aria-active dfn:not([role]),
-body.ally-aria-active details:not([role]),
-body.ally-aria-active dialog:not([role]),
-body.ally-aria-active dl:not([role]),
-body.ally-aria-active embed:not([role]),
-body.ally-aria-active fieldset:not([role]),
-body.ally-aria-active figcaption:not([role]),
-body.ally-aria-active figure:not([role]),
-body.ally-aria-active form:not([role]),
-body.ally-aria-active h1:not([role]),
-body.ally-aria-active h2:not([role]),
-body.ally-aria-active h3:not([role]),
-body.ally-aria-active h4:not([role]),
-body.ally-aria-active h5:not([role]),
-body.ally-aria-active h6:not([role]),
-body.ally-aria-active hr:not([role]),
-body.ally-aria-active img:not([role]),
-body.ally-aria-active input[type=button]:not([role]):before,
-body.ally-aria-active input[type=checkbox]:not([role]):before,
-body.ally-aria-active input[type=email]:not([role]):before,
-body.ally-aria-active input[type=image]:not([role]):before,
-body.ally-aria-active input[type=number]:not([role]):before,
-body.ally-aria-active input[type=radio]:not([role]):before,
-body.ally-aria-active input[type=range]:not([role]):before,
-body.ally-aria-active input[type=reset]:not([role]):before,
-body.ally-aria-active input[type=search]:not([role]):before,
-body.ally-aria-active input[type=submit]:not([role]):before,
-body.ally-aria-active a:not([role]):before,
-body.ally-aria-active main:not([role]):before,
-body.ally-aria-active math:not([role]):before,
-body.ally-aria-active menu:not([role]):before,
-body.ally-aria-active object:not([role]):before,
-body.ally-aria-active ol:not([role]):before,
-body.ally-aria-active optgroup:not([role]):before,
-body.ally-aria-active option:not([role]):before,
-body.ally-aria-active output:not([role]):before,
-body.ally-aria-active progress:not([role]):before,
-body.ally-aria-active section:not([role]):before,
-body.ally-aria-active select:not([role]):before,
-body.ally-aria-active summary:not([role]):before,
-body.ally-aria-active table:not([role]):before,
-body.ally-aria-active tbody:not([role]):before,
-body.ally-aria-active textarea:not([role]):before,
-body.ally-aria-active tfoot:not([role]):before,
-body.ally-aria-active thead:not([role]):before,
-body.ally-aria-active td:not([role]):before,
-body.ally-aria-active th:not([role]):before,
-body.ally-aria-active tr:not([role]):before,
-body.ally-aria-active ul:not([role]):before,
-body.ally-aria-active video:not([role]):before,
-body.ally-aria-active ul:not([role]):before,
-body.ally-aria-active ul:not([role]):before {
+body.show-aria-roles header:not([role]),
+body.show-aria-roles nav:not([role]),
+body.show-aria-roles footer:not([role]),
+body.show-aria-roles article:not([role]),
+body.show-aria-roles aside:not([role]),
+body.show-aria-roles datalist:not([role]),
+body.show-aria-roles dd:not([role]),
+body.show-aria-roles button:not([role]),
+body.show-aria-roles dfn:not([role]),
+body.show-aria-roles details:not([role]),
+body.show-aria-roles dialog:not([role]),
+body.show-aria-roles dl:not([role]),
+body.show-aria-roles embed:not([role]),
+body.show-aria-roles fieldset:not([role]),
+body.show-aria-roles figcaption:not([role]),
+body.show-aria-roles figure:not([role]),
+body.show-aria-roles form:not([role]),
+body.show-aria-roles h1:not([role]),
+body.show-aria-roles h2:not([role]),
+body.show-aria-roles h3:not([role]),
+body.show-aria-roles h4:not([role]),
+body.show-aria-roles h5:not([role]),
+body.show-aria-roles h6:not([role]),
+body.show-aria-roles hr:not([role]),
+body.show-aria-roles img:not([role]),
+body.show-aria-roles input[type=button]:not([role]):before,
+body.show-aria-roles input[type=checkbox]:not([role]):before,
+body.show-aria-roles input[type=email]:not([role]):before,
+body.show-aria-roles input[type=image]:not([role]):before,
+body.show-aria-roles input[type=number]:not([role]):before,
+body.show-aria-roles input[type=radio]:not([role]):before,
+body.show-aria-roles input[type=range]:not([role]):before,
+body.show-aria-roles input[type=reset]:not([role]):before,
+body.show-aria-roles input[type=search]:not([role]):before,
+body.show-aria-roles input[type=submit]:not([role]):before,
+body.show-aria-roles a:not([role]):before,
+body.show-aria-roles main:not([role]):before,
+body.show-aria-roles math:not([role]):before,
+body.show-aria-roles menu:not([role]):before,
+body.show-aria-roles object:not([role]):before,
+body.show-aria-roles ol:not([role]):before,
+body.show-aria-roles optgroup:not([role]):before,
+body.show-aria-roles option:not([role]):before,
+body.show-aria-roles output:not([role]):before,
+body.show-aria-roles progress:not([role]):before,
+body.show-aria-roles section:not([role]):before,
+body.show-aria-roles select:not([role]):before,
+body.show-aria-roles summary:not([role]):before,
+body.show-aria-roles table:not([role]):before,
+body.show-aria-roles tbody:not([role]):before,
+body.show-aria-roles textarea:not([role]):before,
+body.show-aria-roles tfoot:not([role]):before,
+body.show-aria-roles thead:not([role]):before,
+body.show-aria-roles td:not([role]):before,
+body.show-aria-roles th:not([role]):before,
+body.show-aria-roles tr:not([role]):before,
+body.show-aria-roles ul:not([role]):before,
+body.show-aria-roles video:not([role]):before,
+body.show-aria-roles ul:not([role]):before,
+body.show-aria-roles ul:not([role]):before {
    outline:var(--a11y-aria-outline)!important;
    position: relative!important;
 }
 
 
-body.ally-alt-active img:not([alt]) {
+body.show-alt-tags img:not([alt]) {
    outline:var(--a11y-alt-outline)!important;
    position: relative!important;
 }
 
-body.ally-type-active button:not([type]),
-body.ally-type-active input:not([type]),
-body.ally-type-active command:not([type]),
-body.ally-type-active embed:not([type]),
-body.ally-type-active object:not([type]),
-body.ally-type-active source:not([type]),
-body.ally-type-active menu:not([type])
+body.show-aria-roles button:not([type]),
+body.show-aria-roles input:not([type]),
+body.show-aria-roles command:not([type]),
+body.show-aria-roles embed:not([type]),
+body.show-aria-roles object:not([type]),
+body.show-aria-roles source:not([type]),
+body.show-aria-roles menu:not([type])
  {
    outline:var(--a11y-type-outline)!important;
   position: relative!important;
 }
 
 
-body.ally-aria-active header:not([role]):before,
-body.ally-aria-active nav:not([role]):before,
-body.ally-aria-active footer:not([role]):before,
-body.ally-aria-active article:not([role]):before,
-body.ally-aria-active aside:not([role]):before,
-body.ally-aria-active button:not([role]):before,
-body.ally-aria-active a:not([role]):before,
-body.ally-aria-active datalist:not([role]):before,
-body.ally-aria-active dfn:not([role]):before,
-body.ally-aria-active details:not([role]):before,
-body.ally-aria-active dialog:not([role]):before,
-body.ally-aria-active dl:not([role]):before,
-body.ally-aria-active embed:not([role]):before,
-body.ally-aria-active fieldset:not([role]):before,
-body.ally-aria-active figcaption:not([role]):before,
-body.ally-aria-active figure:not([role]):before,
-body.ally-aria-active form:not([role]):before,
-body.ally-aria-active dd:not([role]):before,
-body.ally-aria-active h1:not([role]):before,
-body.ally-aria-active h2:not([role]):before,
-body.ally-aria-active h3:not([role]):before,
-body.ally-aria-active h4:not([role]):before,
-body.ally-aria-active h5:not([role]):before,
-body.ally-aria-active h6:not([role]):before,
-body.ally-aria-active hr:not([role]):before,
-body.ally-aria-active img:not([role]):before,
-body.ally-aria-active input[type=button]:not([role]):before,
-body.ally-aria-active input[type=checkbox]:not([role]):before,
-body.ally-aria-active input[type=email]:not([role]):before,
-body.ally-aria-active input[type=image]:not([role]):before,
-body.ally-aria-active input[type=number]:not([role]):before,
-body.ally-aria-active input[type=radio]:not([role]):before,
-body.ally-aria-active input[type=range]:not([role]):before,
-body.ally-aria-active input[type=reset]:not([role]):before,
-body.ally-aria-active input[type=search]:not([role]):before,
-body.ally-aria-active input[type=submit]:not([role]):before,
-body.ally-aria-active a:not([role]):before,
-body.ally-aria-active main:not([role]):before,
-body.ally-aria-active math:not([role]):before,
-body.ally-aria-active menu:not([role]):before,
-body.ally-aria-active object:not([role]):before,
-body.ally-aria-active ol:not([role]):before,
-body.ally-aria-active optgroup:not([role]):before,
-body.ally-aria-active option:not([role]):before,
-body.ally-aria-active output:not([role]):before,
-body.ally-aria-active progress:not([role]):before,
-body.ally-aria-active section:not([role]):before,
-body.ally-aria-active select:not([role]):before,
-body.ally-aria-active summary:not([role]):before,
-body.ally-aria-active table:not([role]):before,
-body.ally-aria-active tbody:not([role]):before,
-body.ally-aria-active textarea:not([role]):before,
-body.ally-aria-active tfoot:not([role]):before,
-body.ally-aria-active thead:not([role]):before,
-body.ally-aria-active td:not([role]):before,
-body.ally-aria-active th:not([role]):before,
-body.ally-aria-active tr:not([role]):before,
-body.ally-aria-active ul:not([role]):before,
-body.ally-aria-active video:not([role]):before,
-body.ally-aria-active ul:not([role]):before,
-body.ally-aria-active ul:not([role]):before,
-body.ally-aria-active ul:not([role]):before,
-body.ally-aria-active button:not([type]) {
+body.show-aria-roles header:not([role]):before,
+body.show-aria-roles nav:not([role]):before,
+body.show-aria-roles footer:not([role]):before,
+body.show-aria-roles article:not([role]):before,
+body.show-aria-roles aside:not([role]):before,
+body.show-aria-roles button:not([role]):before,
+body.show-aria-roles a:not([role]):before,
+body.show-aria-roles datalist:not([role]):before,
+body.show-aria-roles dfn:not([role]):before,
+body.show-aria-roles details:not([role]):before,
+body.show-aria-roles dialog:not([role]):before,
+body.show-aria-roles dl:not([role]):before,
+body.show-aria-roles embed:not([role]):before,
+body.show-aria-roles fieldset:not([role]):before,
+body.show-aria-roles figcaption:not([role]):before,
+body.show-aria-roles figure:not([role]):before,
+body.show-aria-roles form:not([role]):before,
+body.show-aria-roles dd:not([role]):before,
+body.show-aria-roles h1:not([role]):before,
+body.show-aria-roles h2:not([role]):before,
+body.show-aria-roles h3:not([role]):before,
+body.show-aria-roles h4:not([role]):before,
+body.show-aria-roles h5:not([role]):before,
+body.show-aria-roles h6:not([role]):before,
+body.show-aria-roles hr:not([role]):before,
+body.show-aria-roles img:not([role]):before,
+body.show-aria-roles input[type=button]:not([role]):before,
+body.show-aria-roles input[type=checkbox]:not([role]):before,
+body.show-aria-roles input[type=email]:not([role]):before,
+body.show-aria-roles input[type=image]:not([role]):before,
+body.show-aria-roles input[type=number]:not([role]):before,
+body.show-aria-roles input[type=radio]:not([role]):before,
+body.show-aria-roles input[type=range]:not([role]):before,
+body.show-aria-roles input[type=reset]:not([role]):before,
+body.show-aria-roles input[type=search]:not([role]):before,
+body.show-aria-roles input[type=submit]:not([role]):before,
+body.show-aria-roles a:not([role]):before,
+body.show-aria-roles main:not([role]):before,
+body.show-aria-roles math:not([role]):before,
+body.show-aria-roles menu:not([role]):before,
+body.show-aria-roles object:not([role]):before,
+body.show-aria-roles ol:not([role]):before,
+body.show-aria-roles optgroup:not([role]):before,
+body.show-aria-roles option:not([role]):before,
+body.show-aria-roles output:not([role]):before,
+body.show-aria-roles progress:not([role]):before,
+body.show-aria-roles section:not([role]):before,
+body.show-aria-roles select:not([role]):before,
+body.show-aria-roles summary:not([role]):before,
+body.show-aria-roles table:not([role]):before,
+body.show-aria-roles tbody:not([role]):before,
+body.show-aria-roles textarea:not([role]):before,
+body.show-aria-roles tfoot:not([role]):before,
+body.show-aria-roles thead:not([role]):before,
+body.show-aria-roles td:not([role]):before,
+body.show-aria-roles th:not([role]):before,
+body.show-aria-roles tr:not([role]):before,
+body.show-aria-roles ul:not([role]):before,
+body.show-aria-roles video:not([role]):before,
+body.show-aria-roles ul:not([role]):before,
+body.show-aria-roles ul:not([role]):before,
+body.show-aria-roles ul:not([role]):before,
+body.show-aria-roles button:not([type]) {
   font-family:var(--a11y-font-stack)!important;
   font-weight:500!important;
   font-size:10px!important;
@@ -179,85 +179,85 @@ body.ally-aria-active button:not([type]) {
   letter-spacing:0!important;
 }
 
-body.ally-aria-active nav:not([role]):before,
-body.ally-aria-active aside:not([role]):before  {
+body.show-aria-roles nav:not([role]):before,
+body.show-aria-roles aside:not([role]):before  {
   content: 'role';
 }
 
-body.ally-aria-active footer:not([role]):before {
+body.show-aria-roles footer:not([role]):before {
   content: 'role = article | complementary | main | navigation | region';
 }
 
-body.ally-aria-active header:not([role]):before {
+body.show-aria-roles header:not([role]):before {
   content: 'role = banner | group | presentation';
 }
 
-body.ally-aria-active button:not([role]):before {
+body.show-aria-roles button:not([role]):before {
   content: 'role = button | checkbox | link | menuitem | menuitemcheckbox | menuitemradio | option | radio | switch | tab';
 }
 
-body.ally-aria-active article:not([role]):before {
+body.show-aria-roles article:not([role]):before {
   content: 'role = feed | presentation | none | document | application | main | region';
 }
 
-body.ally-aria-active aside:not([role]):before {
+body.show-aria-roles aside:not([role]):before {
   content: 'role = complementary';
 }
 
-body.ally-aria-active datalist:not([role]):before {
+body.show-aria-roles datalist:not([role]):before {
   content: 'role = listbox';
 }
 
-body.ally-aria-active dd:not([role]):before {
+body.show-aria-roles dd:not([role]):before {
   content: 'role = definition';
 }
 
-body.ally-aria-active dfn:not([role]):before {
+body.show-aria-roles dfn:not([role]):before {
   content: 'role = term';
 }
 
-body.ally-aria-active details:not([role]):before {
+body.show-aria-roles details:not([role]):before {
   content: 'role = group';
 }
 
-body.ally-aria-active dialog:not([role]):before {
+body.show-aria-roles dialog:not([role]):before {
   content: 'role = group | list | presentation';
 }
 
-body.ally-aria-active dl:not([role]):before {
+body.show-aria-roles dl:not([role]):before {
   content: 'role = listitem';
 }
 
-body.ally-aria-active embed:not([role]):before {
+body.show-aria-roles embed:not([role]):before {
   content: 'role = application | document | img | presentation';
 }
 
-body.ally-aria-active fieldset:not([role]):before {
+body.show-aria-roles fieldset:not([role]):before {
   content: 'role = presentation | radiogroup';
 }
 
-body.ally-aria-active figcaption:not([role]):before {
+body.show-aria-roles figcaption:not([role]):before {
   content: 'role = group | presentation';
 }
 
-body.ally-aria-active figure:not([role]):before {
+body.show-aria-roles figure:not([role]):before {
   content: 'role = figure';
 }
 
-body.ally-aria-active form:not([role]):before {
+body.show-aria-roles form:not([role]):before {
   content: 'role = search | presentation';
 }
 
-body.ally-aria-active h1:not([role]):before,
-body.ally-aria-active h2:not([role]):before,
-body.ally-aria-active h3:not([role]):before,
-body.ally-aria-active h4:not([role]):before,
-body.ally-aria-active h5:not([role]):before,
-body.ally-aria-active h6:not([role]):before {
+body.show-aria-roles h1:not([role]):before,
+body.show-aria-roles h2:not([role]):before,
+body.show-aria-roles h3:not([role]):before,
+body.show-aria-roles h4:not([role]):before,
+body.show-aria-roles h5:not([role]):before,
+body.show-aria-roles h6:not([role]):before {
   content: 'role = heading';
 }
 
-body.ally-aria-active hr:not([role]):before {
+body.show-aria-roles hr:not([role]):before {
   content: 'role = separator | presentation';
 }
 

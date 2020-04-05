@@ -4,7 +4,7 @@ chrome.storage.local.get(['show-aria-roles-localstorage'], function(returned) {
 
     if (returned['show-aria-roles-localstorage'] === 'true') {
 
-        document.querySelector('body').classList.add('ally-aria-active');
+        document.querySelector('body').classList.add('show-aria-roles');
 
         const switchOne = document.getElementById('show-aria-roles');
         if (switchOne) {
@@ -26,7 +26,7 @@ chrome.storage.local.get(['show-alt-tags-localstorage'], function(returned) {
 
     if (returned['show-alt-tags-localstorage'] === 'true') {
 
-        document.querySelector('body').classList.add('ally-alt-active');
+        document.querySelector('body').classList.add('show-alt-tags');
 
         const switchOne = document.getElementById('show-alt-tags');
         if (switchOne) {
@@ -48,7 +48,7 @@ chrome.storage.local.get(['show-type-attributes-localstorage'], function(returne
 
     if (returned['show-type-attributes-localstorage'] === 'true') {
 
-        document.querySelector('body').classList.add('ally-type-active');
+        document.querySelector('body').classList.add('show-type-attributes');
 
         const switchOne = document.getElementById('show-type-attributes');
         if (switchOne) {
