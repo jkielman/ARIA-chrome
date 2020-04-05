@@ -4,7 +4,7 @@
   "manifest_version": 2,
   "author": "Jeff Kielman",
   "offline_enabled": true,
-  "description": "Outlines the web pages that are not accessible",
+  "description": "Outlines the web pages elements that are missing ARIA attributes, Alt tags and Type attributes",
   "browser_action": {
     "default_icon": {
       "48": "assets/icon48.png"
