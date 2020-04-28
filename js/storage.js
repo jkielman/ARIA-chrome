@@ -1,70 +1,33 @@
 'use strict';
 
-chrome.storage.local.get(['show-aria-roles-localstorage'], function(returned) {
+let inputNames = ['show-aria-roles','show-alt-tags','show-type-attributes'],
+    inputStorage = ['show-aria-roles-localstorage','show-alt-tags-localstorage','show-type-attributes-localstorage'];
 
-    if (returned['show-aria-roles-localstorage'] === 'true') {
+    inputNames.forEach(function(names, index) {
 
-        document.querySelector('body').classList.add('show-aria-roles');
+chrome.storage.local.get([`${inputStorage[index]}`], function(returned) {
 
-        const switchOne = document.getElementById('show-aria-roles');
-        if (switchOne) {
-            document.getElementById('show-aria-roles').classList.add('active');
-        }
+    if (returned[`${inputStorage[index]}`] === 'true') {
+
+        document.querySelector('body').classList.add(names);
+
+        const inputBtn = document.getElementById(names);
+        inputBtn ? document.getElementById(names).classList.add('active') : null;
 
     } else {
 
-        const switchOne = document.getElementById('show-aria-roles');
-        if (switchOne) {
-            document.getElementById('show-aria-roles').classList.remove('active');
-        }
+        const inputBtn = document.getElementById(names);
+        inputBtn ? document.getElementById(names).classList.remove('active') : null;
 
     }
 
 });
 
-chrome.storage.local.get(['show-alt-tags-localstorage'], function(returned) {
-
-    if (returned['show-alt-tags-localstorage'] === 'true') {
-
-        document.querySelector('body').classList.add('show-alt-tags');
-
-        const switchOne = document.getElementById('show-alt-tags');
-        if (switchOne) {
-            document.getElementById('show-alt-tags').classList.add('active');
-        }
-
-    } else {
-
-        const switchOne = document.getElementById('show-alt-tags');
-        if (switchOne) {
-            document.getElementById('show-alt-tags').classList.remove('active');
-        }
-
-    }
-
 });
 
-chrome.storage.local.get(['show-type-attributes-localstorage'], function(returned) {
 
-    if (returned['show-type-attributes-localstorage'] === 'true') {
 
-        document.querySelector('body').classList.add('show-type-attributes');
 
-        const switchOne = document.getElementById('show-type-attributes');
-        if (switchOne) {
-            document.getElementById('show-type-attributes').classList.add('active');
-        }
-
-    } else {
-
-        const switchOne = document.getElementById('show-type-attributes');
-        if (switchOne) {
-            document.getElementById('show-type-attributes').classList.remove('active');
-        }
-
-    }
-
-});
 
 
 

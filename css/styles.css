@@ -11,13 +11,6 @@
     --a11y-font-stack: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
 }
 
-  /*--a11y-outline
-  --a11y-neongreen*/
-
-/*-------https://www.w3.org/TR/html-aria/--------*/
-
-
-
 body.show-aria-roles header:not([role]),
 body.show-aria-roles nav:not([role]),
 body.show-aria-roles footer:not([role]),
@@ -82,13 +75,10 @@ body.show-aria-roles ul:not([role]):before {
    position: relative!important;
 }
 
-
 body.show-alt-tags img:not([alt]) {
    outline:var(--a11y-alt-outline)!important;
    position: relative!important;
 }
-
-
 
 body.show-type-attributes button:not([type]),
 body.show-type-attributes input:not([type]),
@@ -101,7 +91,6 @@ body.show-type-attributes menu:not([type])
   outline:var(--a11y-type-outline)!important;
   position: relative!important;
 }
-
 
 body.show-aria-roles header:not([role]):before,
 body.show-aria-roles nav:not([role]):before,
@@ -180,16 +169,14 @@ body.show-aria-roles ul:not([role]):before {
   letter-spacing:0!important;
 }
 
-
 body.show-type-attributes button:not([type]):before,
 body.show-type-attributes input:not([type]):before,
 body.show-type-attributes command:not([type]):before,
 body.show-type-attributes embed:not([type]):before,
 body.show-type-attributes object:not([type]):before,
 body.show-type-attributes source:not([type]):before,
-body.show-type-attributes menu:not([type]):before
-{
-font-family:var(--a11y-font-stack)!important;
+body.show-type-attributes menu:not([type]):before {
+  font-family:var(--a11y-font-stack)!important;
   font-weight:500!important;
   font-size:10px!important;
   color:var(--a11y-white)!important;
