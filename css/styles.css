@@ -88,15 +88,17 @@ body.show-alt-tags img:not([alt]) {
    position: relative!important;
 }
 
-body.show-aria-roles button:not([type]),
-body.show-aria-roles input:not([type]),
-body.show-aria-roles command:not([type]),
-body.show-aria-roles embed:not([type]),
-body.show-aria-roles object:not([type]),
-body.show-aria-roles source:not([type]),
-body.show-aria-roles menu:not([type])
- {
-   outline:var(--a11y-type-outline)!important;
+
+
+body.show-type-attributes button:not([type]),
+body.show-type-attributes input:not([type]),
+body.show-type-attributes command:not([type]),
+body.show-type-attributes embed:not([type]),
+body.show-type-attributes object:not([type]),
+body.show-type-attributes source:not([type]),
+body.show-type-attributes menu:not([type])
+{
+  outline:var(--a11y-type-outline)!important;
   position: relative!important;
 }
 
@@ -162,8 +164,7 @@ body.show-aria-roles ul:not([role]):before,
 body.show-aria-roles video:not([role]):before,
 body.show-aria-roles ul:not([role]):before,
 body.show-aria-roles ul:not([role]):before,
-body.show-aria-roles ul:not([role]):before,
-body.show-aria-roles button:not([type]) {
+body.show-aria-roles ul:not([role]):before {
   font-family:var(--a11y-font-stack)!important;
   font-weight:500!important;
   font-size:10px!important;
@@ -178,6 +179,31 @@ body.show-aria-roles button:not([type]) {
   left:0!important;
   letter-spacing:0!important;
 }
+
+
+body.show-type-attributes button:not([type]):before,
+body.show-type-attributes input:not([type]):before,
+body.show-type-attributes command:not([type]):before,
+body.show-type-attributes embed:not([type]):before,
+body.show-type-attributes object:not([type]):before,
+body.show-type-attributes source:not([type]):before,
+body.show-type-attributes menu:not([type]):before
+{
+font-family:var(--a11y-font-stack)!important;
+  font-weight:500!important;
+  font-size:10px!important;
+  color:var(--a11y-white)!important;
+  background-color:var(--a11y-type-bg)!important;
+  padding:4px!important;
+  height:20px!important;
+  text-transform:capitalize!important;
+  position: absolute!important;
+  z-index: 2000!important;
+  top:0!important;
+  left:0!important;
+  letter-spacing:0!important;
+}
+
 
 body.show-aria-roles nav:not([role]):before,
 body.show-aria-roles aside:not([role]):before  {
@@ -321,6 +347,10 @@ ul.ally-menu {
 
 #show-aria-roles, #show-alt-tags, #show-type-attributes {
     background: url('../assets/inactive.svg') no-repeat 13px 17px;
+}
+
+#show-aria-roles:hover, #show-alt-tags:hover, #show-type-attributes:hover {
+    background: var(--ally-menuhover) url('../assets/inactive.svg') no-repeat 13px 17px;
 }
 
 #show-aria-roles.active {

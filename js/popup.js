@@ -2,60 +2,50 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    var inputNames = ['show-aria-roles','show-alt-tags','show-type-attributes'],
-        inputLabels = ['ARIA roles','Alt tags','Type attributes'],
-        int = 0;
+    let inputNames = ['show-aria-roles','show-alt-tags','show-type-attributes'],
+        inputStorage = ['show-aria-roles-localstorage','show-alt-tags-localstorage','show-type-attributes-localstorage'],
+        inputLabels = ['ARIA roles','Alt tags','Type attributes'];
 
+    
+    inputNames.forEach(function(names, index) {
 
-    inputNames.forEach(function(names) {
+    chrome.storage.local.get([`${inputStorage[index]}`], function(returned) {
 
-    chrome.storage.local.get([names+'-localstorage'], function(returned) {
-
-        const label = inputLabels[int];
-
-        int++;
+        const label = inputLabels[index];
 
         document.getElementById(names).value =
             returned[names] === 'true' ?
             label : label;
 
-        returned[names+'-localstorage'] === 'true' ? document.getElementById(names).classList.add('active') :
+        returned[`${inputStorage[index]}`] === 'true' ? document.getElementById(names).classList.add('active') :
         document.getElementById(names).classList.remove('active');
 
     });
 
+    if (document.getElementById(names)) {
+
+        //eventListener for Storage 
+        document.getElementById(names).addEventListener('click', () => {
 
 
+            console.log(names, 'names');
 
-
-
-
-    })
-
-
-    const buttonOne = document.getElementById('show-aria-roles');
-
-    if (buttonOne) {
-
-        //Event for Storage 1
-        buttonOne.addEventListener('click', () => {
-
-            if (document.getElementById('show-aria-roles').classList.contains("active")) {
-                document.querySelector('body').classList.remove('show-aria-roles');
+            if (document.getElementById(names).classList.contains('active')) {
+                document.querySelector('body').classList.remove(names);
             }
 
-            buttonOne.classList.toggle('active');
+            document.getElementById(names).classList.toggle('active');
 
             chrome.tabs.query({}, function(tabs) {
 
-                //.executeScript
+                // executeScript
                 for (var i = 0; i < tabs.length; i++) {
                     chrome.tabs.executeScript(tabs[i].id, {
-                        code: 'document.querySelector("body").classList.toggle("show-aria-roles");'
+                        code: `document.querySelector("body").classList.toggle("${names}");`
                     });
                 }
 
-                //.insertCSS
+                //insert CSS
                 for (var e = 0; e < tabs.length; e++) {
                     chrome.tabs.insertCSS(tabs[e].id, {
                         file: 'css/styles.css'
@@ -64,140 +54,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
             });
 
+            //Get Storage
+            chrome.storage.local.get([`${inputStorage[index]}`], function(returned) {
 
-            chrome.storage.local.get(['show-aria-roles-localstorage'], function(returned) {
-                const label = 'ARIA roles';
-                if (returned['show-aria-roles-localstorage'] === 'true') {
-                    chrome.storage.local.remove(['show-aria-roles-localstorage']);
+                const label = inputLabels[index];
+
+                if (returned[`${inputStorage[index]}`] === 'true') {
+                    chrome.storage.local.remove([`${inputStorage[index]}`]);
                     label;
                     chrome.tabs.executeScript({
-                        code: 'document.querySelector("body").classList.remove("show-aria-roles");'
+                        code: `document.querySelector("body").classList.remove("${names}");`
                     });
                 } else {
                     chrome.storage.local.set({
-                        'show-aria-roles-localstorage': 'true',
+                        [inputStorage[index]]: 'true',
                     });
                     chrome.tabs.executeScript({
-                        code: 'document.querySelector("body").classList.add("show-aria-roles");'
+                        code: `document.querySelector("body").classList.add("${names}");`
                     });
                     label;
                 }
-                buttonOne.value = label;
+                document.getElementById(names).value = label;
             });
         });
 
     }
-
-
-    const buttonTwo = document.getElementById('show-alt-tags');
-    if (buttonTwo) {
-
-        //Event for Storage 1
-        buttonTwo.addEventListener('click', () => {
-
-            if (document.getElementById('show-alt-tags').classList.contains("active")) {
-                // document.getElementById('show-alt-tags').dispatchEvent(new Event('click'));
-                document.querySelector('body').classList.remove('ally-alt-active');
-            }
-
-            buttonTwo.classList.toggle('active');
-
-            chrome.tabs.query({}, function(tabs) {
-
-                //.executeScript
-                for (var i = 0; i < tabs.length; i++) {
-                    chrome.tabs.executeScript(tabs[i].id, {
-                        code: 'document.querySelector("body").classList.toggle("show-alt-tags");'
-                    });
-                }
-
-                //.insertCSS
-                for (var e = 0; e < tabs.length; e++) {
-                    chrome.tabs.insertCSS(tabs[e].id, {
-                        file: 'css/styles.css'
-                    });
-                }
-
-            });
-
-
-            chrome.storage.local.get(['show-alt-tags-localstorage'], function(returned) {
-                const label = 'Alt tags';
-                if (returned['show-alt-tags-localstorage'] === 'true') {
-                    chrome.storage.local.remove(['show-alt-tags-localstorage']);
-                    label;
-                    chrome.tabs.executeScript({
-                        code: 'document.querySelector("body").classList.remove("show-alt-tags");'
-                    });
-                } else {
-                    chrome.storage.local.set({
-                        'show-alt-tags-localstorage': 'true',
-                    });
-                    chrome.tabs.executeScript({
-                        code: 'document.querySelector("body").classList.add("show-alt-tags");'
-                    });
-                    label;
-                }
-                buttonTwo.value = label;
-            });
-        });
-
-    }
-
-
-//Button three
-
-    const buttonThree = document.getElementById('show-type-attributes');
-    if (buttonThree) {
-
-        //Event for Storage 1
-        buttonThree.addEventListener('click', () => {
-
-            if (document.getElementById('show-type-attributes').classList.contains("active")) {
-                document.querySelector('body').classList.remove('ally-type-active');
-            }
-
-            buttonThree.classList.toggle('active');
-
-            chrome.tabs.query({}, function(tabs) {
-
-                //.executeScript
-                for (var i = 0; i < tabs.length; i++) {
-                    chrome.tabs.executeScript(tabs[i].id, {
-                        code: 'document.querySelector("body").classList.toggle("show-type-attributes");'
-                    });
-                }
-
-                //.insertCSS
-                for (var e = 0; e < tabs.length; e++) {
-                    chrome.tabs.insertCSS(tabs[e].id, {
-                        file: 'css/styles.css'
-                    });
-                }
-
-            });
-
-
-            chrome.storage.local.get(['show-type-attributes-localstorage'], function(returned) {
-                const label = 'Type attributes';
-                if (returned['show-type-attributes-localstorage'] === 'true') {
-                    chrome.storage.local.remove(['show-type-attributes-localstorage']);
-                    label;
-                    chrome.tabs.executeScript({
-                        code: 'document.querySelector("body").classList.remove("show-type-attributes");'
-                    });
-                } else {
-                    chrome.storage.local.set({
-                        'show-type-attributes-localstorage': 'true',
-                    });
-                    chrome.tabs.executeScript({
-                        code: 'document.querySelector("body").classList.add("show-type-attributes");'
-                    });
-                    label;
-                }
-                buttonThree.value = label;
-            });
-        });
-
-    }
+ 
+})
+    
 });
