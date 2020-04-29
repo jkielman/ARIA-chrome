@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         inputLabels = ['ARIA roles','Alt tags','Type attributes'];
 
     
-    inputNames.forEach(function(names, index) {
+    inputNames.forEach((names, index) => {
 
     chrome.storage.local.get([`${inputStorage[index]}`], function(returned) {
 

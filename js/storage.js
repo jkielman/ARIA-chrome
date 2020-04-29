@@ -3,7 +3,7 @@
 let inputNames = ['show-aria-roles','show-alt-tags','show-type-attributes'],
     inputStorage = ['show-aria-roles-localstorage','show-alt-tags-localstorage','show-type-attributes-localstorage'];
 
-    inputNames.forEach(function(names, index) {
+    inputNames.forEach((names, index) => {
 
 chrome.storage.local.get([`${inputStorage[index]}`], function(returned) {
 
