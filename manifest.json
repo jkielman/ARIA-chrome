@@ -1,10 +1,10 @@
 {
-  "name": "Ally - An A11y chrome extension",
-  "version": "1.0",
+  "name": "Compadre",
+  "version": "1.2",
   "manifest_version": 2,
   "author": "Jeff Kielman",
   "offline_enabled": true,
-  "description": "Outlines the web pages elements that have missing ARIA attributes, alt tags or type attributes",
+  "description": "An A11y chrome extension that outlines the web pages elements that have missing ARIA attributes, alt tags or type attributes",
   "browser_action": {
     "default_icon": {
       "48": "assets/icon48.png"

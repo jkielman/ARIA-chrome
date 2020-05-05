@@ -1,10 +1,10 @@
 :root {
-    --a11y-aria-outline:2px #3131FB solid!important;
+    --a11y-aria-outline:2px #089E7F solid!important;
     --a11y-alt-outline:2px #F5595D solid!important;
-    --a11y-type-outline:2px #089E7F solid!important;
-    --a11y-aria-bg:#3131FB;
+    --a11y-type-outline:2px #154CA7 solid!important;
+    --a11y-aria-bg:#089E7F;
     --a11y-alt-bg:#F5595D;
-    --a11y-type-bg:#089E7F;
+    --a11y-type-bg:#154CA7;
     --a11y-white:#fff;
     --ally-menuhover:#F4F8FF;
     --greyoutline:1px #E0E5EB solid;
